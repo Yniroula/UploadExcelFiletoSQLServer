@@ -1,10 +1,10 @@
-This application simply does two things:
+# This application simply does two things:
     1. Uploads excel file to SQL SERVER databse table.
         a. Excel File must contain all Column fields or else will display an error message.
-    2. Runs a SELECT query.
+    2. Runs a SELECT query from SQL SERVER table.
 
 
-Follow the instrustions below to Deploy Flask Application on IIS server using wfastcgi:
+# Follow the instrustions below to Deploy Flask Application on IIS server using wfastcgi:
 
     1. Install Python in the system at "C:\Python" folder.
     2. Add “C:\Python\” and “C:\Python\Scripts” to system environment variables.
