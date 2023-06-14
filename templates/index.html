@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Excel File From City Hall</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+    <h1>Upload Excel File</h1>
+    <form class = "first_form" method="POST" action="{{ url_for('upload') }}" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Upload</button>
+    
+    {% if message %}
+        {% if 'failed' in message %}
+            <div class="error-message">{{ message }}</div>
+        {% else %}
+            <div class="success-message">{{ message }}</div>
+        {% endif %}
+    {% endif %}
+    </form>
+
+    <h1>See upload results</h1>
+    <form class = "second_form" method="POST" action="{{ url_for('show_table') }}">
+        <button type="submit">Run Query</button>   
+    <div>
+    <table class="styled-table">
+        <thead>
+        <tr>
+            <th>Column0Heading</th>
+            <th>Column1Heading</th>
+            <th>Column2Heading</th>
+            <th>Column3Heading</th>
+            <th>Column4Heading</th>
+            <!-- add more columns as needed -->
+        </tr>
+        </thead>
+        <tbody>
+        {% for row in results %}
+        <tr>
+            <td class="ellipsis"><span>{{ row[0] }}</span></td>
+            <td class="ellipsis"><span>{{ row[1] }}</span></td>
+            <td class="ellipsis"><span>{{ row[2] }}</span></td>
+            <td class="ellipsis"><span>{{ row[3] }}</span></td>
+            <td class="ellipsis"><span>{{ row[4] }}</span></td>
+            <!-- add more columns as needed -->
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    </form>
+</body>
+</html>

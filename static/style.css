@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  form {
+    text-align: left;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+  }
+
+  .first_form,
+  .third_form{
+  max-width: 500px;
+  text-align: center;
+  }
+  
+  .second_form{
+    max-width: auto;
+    overflow: auto;
+    }
+
+  input[type=file] {
+    margin: 10px 0;
+  }
+  
+  button[type=submit] {
+    text-align: right;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .success-message {
+    text-align: center;
+    color: #4CAF50;
+    font-family: sans-serif;
+    margin-top: 20px;
+  }
+  
+.error-message {
+    text-align: center;
+    color: #eb0909;
+    font-family: sans-serif;
+    margin-top: 20px;
+  }
+
+.styled-table {
+    overflow-x: auto;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+
+ table {
+    border-collapse: collapse;
+    /*border-spacing: 50px 0;*/
+    table-layout: auto;
+    width: 100%;
+  }
+  
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th{
+  padding: 12px ;
+}
+
+.styled-table td {
+      padding: 12px ;
+      height: 30px;
+  }
+  
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+
+.ellipsis {
+    position: relative;
+}
+.ellipsis:before {
+    content: '&nbsp;';
+    visibility: hidden;
+}
+.ellipsis span {
+    padding: 0px 0px 0px 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    white-space: nowrap;
+    overflow: auto;
+   /* text-overflow: ellipsis;*/
+}
