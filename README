@@ -5,7 +5,6 @@
 
 
 # Follow the instrustions below to Deploy Flask Application on IIS server using wfastcgi:
-
     1. Install Python in the system at "C:\Python" folder.
     2. Add “C:\Python\” and “C:\Python\Scripts” to system environment variables.
     3. Install listed python libraries in requirements.txt folder which includes necessry libraries to run the file like Flask, wfastcgi, etc.
