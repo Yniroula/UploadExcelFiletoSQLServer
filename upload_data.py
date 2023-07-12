@@ -29,7 +29,7 @@ def upload_data_to_sql_server(df):
     # Use pyodbc to execute the SQL query with a list of parameters for each row in the dataframe
     cursor = conn.cursor()
     for _, row in df.iterrows():
-        values = [row[col] if col in row.index else None for col in columns]
+        values = [row[col] if col in row.index and pd.notnull(row[col]) else '' for col in columns]
         cursor.execute(sql_query, tuple(values))
 
     # Commit the changes
